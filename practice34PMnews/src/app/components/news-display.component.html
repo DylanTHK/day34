@@ -1,0 +1,28 @@
+
+<div *ngIf="true">
+    <table *ngFor="let a of articles">
+        <!-- <tr *ngFor="let a of articles"> -->
+        <tr>
+            <td>Title: </td>
+            <td>{{ a.title }}</td>
+        </tr>
+        <tr>
+            <td>Author: </td>
+            <td>{{ a.author }}</td>
+        </tr>
+        <tr>
+            <td>Description: </td>
+            <td>{{ a.description }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <a href="{{ a.url }}" target="_blank">
+                    <img src="{{ a.image }}" alt="image">
+                </a>
+            </td>
+        </tr>
+        <br>
+    </table>
+</div>
+
