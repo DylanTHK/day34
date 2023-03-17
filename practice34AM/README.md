@@ -4,10 +4,6 @@ https://openweathermap.org/current
 
 https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 
-key=a09057affb6e66963f18700222170122
-
-https://api.openweathermap.org/data/2.5/weather?q=singapore&appid=a09057affb6e66963f18700222170122
-
 ## Practice #1
 1. import forms and httpmodule
 2. create form in html

@@ -29,6 +29,7 @@ export class NewsService {
         return firstValueFrom(
             this.getNewsAsObservable(country, category)
         )
+        // function to listen to resolve
         .then((data: any) => {
             console.info(">>> extracted data:", data);
             // convert json to articles
