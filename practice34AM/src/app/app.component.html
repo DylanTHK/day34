@@ -1,1 +1,20 @@
 <h1> {{ title }}</h1>
+
+<form [formGroup]="weatherForm" (ngSubmit)="getWeather()">
+  <table>
+    <tr>
+      <td>City:</td>
+      <td>
+        <input type="text" formControlName="city">
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button type="submit" [disabled]="weatherForm.invalid">Search</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<app-weather-display></app-weather-display>

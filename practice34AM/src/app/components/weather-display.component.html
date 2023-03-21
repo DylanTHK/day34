@@ -1,1 +1,15 @@
-<p>weather-display works!</p>
+<div>
+    <!-- <p>{{weather | json}}</p> -->
+    <table>
+        <div *ngFor="let w of weather">
+            <tr>
+                <td>
+                    {{ w.main }} - {{ w.description }}
+                </td>
+            </tr>
+            <tr>
+                <img src="https://openweathermap.org/img/wn/{{ w.icon }}@4x.png">
+            </tr>
+        </div>
+    </table>
+</div>

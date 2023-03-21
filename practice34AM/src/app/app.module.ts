@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { WeatherDisplayComponent } from './components/weather-display.component';
+import { WeatherService } from './weather.service';
 
 @NgModule({
   declarations: [
@@ -11,10 +12,12 @@ import { WeatherDisplayComponent } from './components/weather-display.component'
     WeatherDisplayComponent
   ],
   imports: [
-    BrowserModule, ReactiveFormsModule,
+    BrowserModule, 
+    ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  // add services here
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

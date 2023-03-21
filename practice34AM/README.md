@@ -1,8 +1,16 @@
 # Practice34AM
 
+## Documentation
 https://openweathermap.org/current
 
+## img format for Icon
+https://openweathermap.org/img/wn/10d@4x.png
+https://openweathermap.org/img/wn/{{ icon }}@4x.png
+
+## Built-in API request by city name (API Call format)
 https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+d1972195e49e953b1600e991eff9724a
+https://api.openweathermap.org/data/2.5/weather?q=singapore&appid=d1972195e49e953b1600e991eff9724a
 
 ## Practice #1
 1. import forms and httpmodule
@@ -48,3 +56,10 @@ Sequence #1
 - Event / property binding (communication between components)
 - Broadcasting (reserve for Http requests)
 3. Do exercises with promise first (Learn observables later)
+
+
+## Lessons Learnt
+1. Module imports
+- add HttpClientModule under imports
+- add services under providers
+
