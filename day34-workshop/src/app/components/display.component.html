@@ -1,0 +1,16 @@
+<table *ngFor="let w of weather">
+    <tr>
+        <td colspan="2">
+            <img src="https://openweathermap.org/img/wn/{{ w.icon }}@4x.png">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>
+                {{ w.main }} - {{ w.description }}
+            </code>
+        </td>
+    </tr>
+</table>
+
+<p> {{ weather | json }} </p>
