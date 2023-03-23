@@ -8,7 +8,7 @@
         <input type="text" formControlName="city">
       </td>
       <td>
-        <button type="submit">Get</button>
+        <button type="submit" [disabled]="form.invalid">Get</button>
       </td>
     </tr>
   </table>

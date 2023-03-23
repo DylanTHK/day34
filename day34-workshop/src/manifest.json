@@ -1,0 +1,9 @@
+{  
+    "name": "My Weather Application",
+    "short_name": "Weather App",
+    "theme_color": " #33ffff",
+    "background_color": "#fff",
+    "display": "browser",
+    "scope": "/",
+    "start_url": "/"
+}
