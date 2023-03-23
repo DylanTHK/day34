@@ -4,14 +4,15 @@ import { firstValueFrom, Subject } from "rxjs";
 import { Weather } from "./model";
 
 const WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather";
-const API_KEY = "d1972195e49e953b1600e991eff9724a";
+const API_KEY = { API_KEY };
 
 @Injectable()
 export class WeatherService {
 
+    // temporary subject to hold data
     onWeather = new Subject<Weather[]>();
 
-    constructor(private http: HttpClient) { };
+    constructor(private httpClient: HttpClient) { };
 
     // api call with HttpClient
     getWeatherAsObservable(city: string) {
@@ -19,7 +20,7 @@ export class WeatherService {
             .set("q", city)
             .set("appid", API_KEY);
 
-        return this.http.get<Weather[]>(WEATHER_URL, {params});
+        return this.httpClient.get<Weather[]>(WEATHER_URL, {params});
     }
 
     getCurrentWeather(city: string): Promise<Weather[]> {
